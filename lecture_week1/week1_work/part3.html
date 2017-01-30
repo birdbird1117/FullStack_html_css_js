@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+          .fieldset_class {border:10px solid yellow; background:lightyellow;
+          margin-bottom:10px; width: 720px}
+          .label_class {width: 180px; display: inline-block;
+          text-align: right; vertical-align: top;}
+          .label_checkbox_radio_class {width: auto;}
+
+          .red_range_words_class {text-align:center; color: white; background: red; }
+          .purple_range_words_class {text-align:center; color: white; background: purple; }
+            .textarea_class { width: 360px; height: 50px;}
+            label:hover { font-size:20px }
+            input:hover { font-size:20px }
+        </style>
+    </head>
+
+
+    <body>
+        <h1>Please Enter Your Details For Our Dating Website!</h1>
+    <form method="post" enctype="multipart/form-data"
+          action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+    	<fieldset class="fieldset_class">
+    		<legend>Your Face</legend>
+
+    		<label class="label_class" for="fileToUpload">Your image:   </label>
+        <input type="file" id="fileToUpload" name="fileToUpload" required>	<br>
+
+    		<label class="label_class" for="preview">Image preview: </label>
+        <img id="preview"> <br>
+
+    	</fieldset> <br>
+
+
+    	<fieldset  class="fieldset_class">
+    		<legend>Your General Details</legend>
+
+    		<label class="label_class" for="name"> Name: </label>
+          <input type="text" name="name" required> <br>
+
+        <label  class= "label_class"  for="gender">Gender:</label>
+          <input  class="label_checkbox_radio_class" type="radio" name="gender" value="male" required> Male
+               <input class="label_checkbox_radio_class" type="radio" name="gender" value="female" required> Female  <br>
+
+        <label class="label_class" for="age">Age:  </label>
+          <input type="number" name="age" required> <br>
+
+        <label class="label_class" for="date">Date of birth:</label>
+         <input type="date" name="date" > <br>
+
+        <label class="label_class" for="color">Favorite color: </label>
+        <input type="color" name="color" > <br>
+
+        <label class="label_class" for="country">Which country: </label>
+        <select name="country">
+          <option value="none"> </option>
+      		<option value="A">America</option>
+          <option value="C">Canada</option>
+          <option value="D">Denmark</option>
+          <option value="S">Sweden</option>
+          <option value="F">Finland</option>
+
+      	</select>
+      </fieldset> <br>
+
+      <fieldset class="fieldset_class">
+    		<legend>Your Indicators</legend>
+
+        <label class="label_class" for="height">Height:  </label>
+        <label class="red_range_words_class"> Short </label>
+           <input type="range" min="0" max="100"name="height">
+          <label class="purple_range_words_class"> Tall </label>
+           	<br>
+
+        <label class="label_class" for="salary">Salary: </label>
+        <label class="red_range_words_class"> Poor </label>
+
+          <input type="range" min="0" max="100"name="salary">
+          <label class="purple_range_words_class"> Rich </label>
+ <br>
+    	</fieldset> <br>
+
+
+     <fieldset class="fieldset_class">
+    		<legend>Your Contact Information</legend>
+
+        <label class="label_class"  for="email">Email: </label>
+        <input type="email" name="email"required> <br>
+
+        <label class="label_class" for="mobile">Mobile: </label>
+        <input type="tel" name="mobile"> <br>
+
+        <label class="label_class" for="address">Address: </label>
+        <textarea  class="textarea_class" name="address" >
+        </textarea> <br>
+
+        <label class= "label_class" for="item">Method to contact you:</label>
+            <input class="label_checkbox_radio_class" type="checkbox" name="item" value="email"> Email
+            <input class="label_checkbox_radio_class" type="checkbox" name="item" value="whatsapp">Whatsapp
+            <input class="label_checkbox_radio_class" type="checkbox" name="item" value="inappchat"> In-app chat <br>
+  	</fieldset> <br>
+
+      <input type="submit" value="Send">
+    </form>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+  </body>
+
+</html>
